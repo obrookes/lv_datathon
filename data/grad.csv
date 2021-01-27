@@ -1,70 +1,70 @@
 ,feature,gradient,feature_cropped
-52,Claim Reason_Collision,-21490.009765625,Claim Reason
-54,Claim Reason_Other,-7431.29443359375,Claim Reason
-55,Claim Reason_Scratch/Dent,2103.97802734375,Claim Reason
-53,Claim Reason_Hail,30875.73046875,Claim Reason
-6,Country_US,-11695.2822265625,Country
-20,Coverage_Extended,-15633.8232421875,Coverage
-19,Coverage_Basic,-15520.9228515625,Coverage
-21,Coverage_Premium,72672.25,Coverage
-26,Education_Master,-131718.234375,Education
-24,Education_Doctor,-67501.625,Education
-23,Education_College,-11772.529296875,Education
-22,Education_Bachelor,6694.0361328125,Education
-25,Education_High School or Below,77436.6640625,Education
-31,EmploymentStatus_Unemployed,-30825.29296875,EmploymentStatus
-28,EmploymentStatus_Employed,5027.9921875,EmploymentStatus
-27,EmploymentStatus_Disabled,27868.859375,EmploymentStatus
-29,EmploymentStatus_Medical Leave,34739.89453125,EmploymentStatus
-30,EmploymentStatus_Retired,34901.23046875,EmploymentStatus
-32,Gender_F,-29577.673828125,Gender
-33,Gender_M,25649.0,Gender
-0,Income,-5333.47998046875,Income
-34,Location Code_Rural,-632627.1875,Location Code
-36,Location Code_Urban,-203684.921875,Location Code
-35,Location Code_Suburban,344730.125,Location Code
-38,Marital Status_Married,-171279.796875,Marital Status
-37,Marital Status_Divorced,-142655.875,Marital Status
-39,Marital Status_Single,208105.796875,Marital Status
-1,Monthly Premium Auto,39504.44921875,Monthly Premium Auto
-2,Months Since Last Claim,-2761.6328125,Months Since Last Claim
-3,Months Since Policy Inception,-444.5836181640625,Months Since Policy Inception
-4,Number of Open Complaints,-1192.9002685546875,Number of Open Complaints
-5,Number of Policies,-1829.02392578125,Number of Policies
-43,Policy_Corporate L1,-15980.865234375,Policy
-51,Policy_Special L3,-11880.8369140625,Policy
-45,Policy_Corporate L3,-11837.4384765625,Policy
-50,Policy_Special L2,-5929.7412109375,Policy
-44,Policy_Corporate L2,-5678.3642578125,Policy
-47,Policy_Personal L2,689.7315063476562,Policy
-48,Policy_Personal L3,1537.2550048828125,Policy
-46,Policy_Personal L1,21814.310546875,Policy
-49,Policy_Special L1,65376.18359375,Policy
-40,Policy Type_Corporate Auto,-19370.34765625,Policy Type
-41,Policy Type_Personal Auto,-3045.290283203125,Policy Type
-42,Policy Type_Special Auto,18262.12890625,Policy Type
-18,Response_Yes,-28560.923828125,Response
-17,Response_No,-3498.120361328125,Response
-59,Sales Channel_Web,-9934.828125,Sales Channel
-57,Sales Channel_Branch,-1049.410400390625,Sales Channel
-56,Sales Channel_Agent,125.73103332519531,Sales Channel
-58,Sales Channel_Call Center,3434.4580078125,Sales Channel
-16,State_Oklahoma,-1735.0389404296875,State
-12,State_Iowa,666.4337158203125,State
-14,State_Missouri,1174.3179931640625,State
-13,State_Kansas,1211.380859375,State
-15,State_Nebraska,9021.68359375,State
-7,State Code_IA,-1693.5859375,State Code
-11,State Code_OK,-1545.6983642578125,State Code
-8,State Code_KS,1721.3701171875,State Code
-10,State Code_NE,5503.78564453125,State Code
-9,State Code_MO,9172.611328125,State Code
-60,Vehicle Class_Four-Door Car,-35409.98046875,Vehicle Class
-65,Vehicle Class_Two-Door Car,-13170.322265625,Vehicle Class
-64,Vehicle Class_Sports Car,-8444.724609375,Vehicle Class
-63,Vehicle Class_SUV,2597.447265625,Vehicle Class
-62,Vehicle Class_Luxury SUV,95714.3125,Vehicle Class
-61,Vehicle Class_Luxury Car,153729.828125,Vehicle Class
-67,Vehicle Size_Medsize,-46046.08984375,Vehicle Size
-66,Vehicle Size_Large,-38827.80859375,Vehicle Size
-68,Vehicle Size_Small,115515.8828125,Vehicle Size
+54,Claim Reason_Other,-21.3547306060791,Claim Reason
+52,Claim Reason_Collision,-10.425851821899414,Claim Reason
+55,Claim Reason_Scratch/Dent,-3.7431578636169434,Claim Reason
+53,Claim Reason_Hail,29.879682540893555,Claim Reason
+6,Country_US,-2.824773345435589e-31,Country
+19,Coverage_Basic,-184.22848510742188,Coverage
+20,Coverage_Extended,25.196903228759766,Coverage
+21,Coverage_Premium,161.17518615722656,Coverage
+26,Education_Master,-27.894487380981445,Education
+23,Education_College,3.272520065307617,Education
+24,Education_Doctor,9.77477741241455,Education
+25,Education_High School or Below,9.988395690917969,Education
+22,Education_Bachelor,13.190508842468262,Education
+27,EmploymentStatus_Disabled,-67.80630493164062,EmploymentStatus
+29,EmploymentStatus_Medical Leave,-56.623844146728516,EmploymentStatus
+28,EmploymentStatus_Employed,-29.504840850830078,EmploymentStatus
+30,EmploymentStatus_Retired,43.03824234008789,EmploymentStatus
+31,EmploymentStatus_Unemployed,87.15062713623047,EmploymentStatus
+32,Gender_F,-4.443713665008545,Gender
+33,Gender_M,7.298101425170898,Gender
+0,Income,-31.519271850585938,Income
+34,Location Code_Rural,-533.4693603515625,Location Code
+36,Location Code_Urban,127.6333236694336,Location Code
+35,Location Code_Suburban,410.3499450683594,Location Code
+38,Marital Status_Married,-58.05084228515625,Marital Status
+37,Marital Status_Divorced,-17.184040069580078,Marital Status
+39,Marital Status_Single,90.40208435058594,Marital Status
+1,Monthly Premium Auto,417.1352233886719,Monthly Premium Auto
+2,Months Since Last Claim,32.32247543334961,Months Since Last Claim
+3,Months Since Policy Inception,48.577980041503906,Months Since Policy Inception
+4,Number of Open Complaints,18.034391403198242,Number of Open Complaints
+5,Number of Policies,-23.105510711669922,Number of Policies
+51,Policy_Special L3,-75.66214752197266,Policy
+45,Policy_Corporate L3,-34.113704681396484,Policy
+46,Policy_Personal L1,-30.744596481323242,Policy
+50,Policy_Special L2,-1.7910139560699463,Policy
+47,Policy_Personal L2,2.9570701122283936,Policy
+48,Policy_Personal L3,13.915884971618652,Policy
+43,Policy_Corporate L1,19.879369735717773,Policy
+44,Policy_Corporate L2,32.74638748168945,Policy
+49,Policy_Special L1,48.0308723449707,Policy
+42,Policy Type_Special Auto,-31.761886596679688,Policy Type
+41,Policy Type_Personal Auto,-0.7096406817436218,Policy Type
+40,Policy Type_Corporate Auto,9.290182113647461,Policy Type
+18,Response_Yes,-17.819149017333984,Response
+17,Response_No,24.016687393188477,Response
+57,Sales Channel_Branch,-39.35029602050781,Sales Channel
+56,Sales Channel_Agent,3.698845148086548,Sales Channel
+59,Sales Channel_Web,23.749067306518555,Sales Channel
+58,Sales Channel_Call Center,25.75922966003418,Sales Channel
+13,State_Kansas,-8.490063667297363,State
+14,State_Missouri,-3.281378984451294,State
+16,State_Oklahoma,-1.682589054107666,State
+15,State_Nebraska,2.1019577980041504,State
+12,State_Iowa,6.143799304962158,State
+8,State Code_KS,-8.239690780639648,State Code
+9,State Code_MO,-3.2891645431518555,State Code
+11,State Code_OK,-1.630328893661499,State Code
+10,State Code_NE,2.136476755142212,State Code
+7,State Code_IA,6.120495796203613,State Code
+60,Vehicle Class_Four-Door Car,-310.42755126953125,Vehicle Class
+65,Vehicle Class_Two-Door Car,-290.8465576171875,Vehicle Class
+64,Vehicle Class_Sports Car,28.47759246826172,Vehicle Class
+63,Vehicle Class_SUV,66.77558898925781,Vehicle Class
+62,Vehicle Class_Luxury SUV,256.5550537109375,Vehicle Class
+61,Vehicle Class_Luxury Car,258.09210205078125,Vehicle Class
+67,Vehicle Size_Medsize,-8.772469520568848,Vehicle Size
+66,Vehicle Size_Large,0.46420982480049133,Vehicle Size
+68,Vehicle Size_Small,16.390893936157227,Vehicle Size

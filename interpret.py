@@ -1,36 +1,76 @@
+from numpy.random import seed
+seed(1)
+import random
+random.seed(1)
+from tensorflow import set_random_seed
+set_random_seed(2)
 import pandas as pd
 import numpy as np
 from utils import interpret,get_feature_groups,create_model,tune,fit_model,evaluate_prediction
 from matplotlib import pyplot as plt
+from sklearn.preprocessing import MinMaxScaler
 import seaborn as sns
-
+import tensorflow as tf
+#6 Configure a new global `tensorflow` session
+from keras import backend as K
+session_conf = tf.ConfigProto(intra_op_parallelism_threads=1, inter_op_parallelism_threads=1)
+sess = tf.Session(graph=tf.get_default_graph(), config=session_conf)
+K.set_session(sess)
 sns.set(style="white")
+
 
 # get training data
 filepath = 'data/new_train.csv'
 df = pd.read_csv(filepath)
 cat_features = ['Country', 'State Code', 'State', 'Response', 'Coverage', 'Education', 'EmploymentStatus', 'Gender', 'Location Code', 'Marital Status', 'Policy Type', 'Policy', 'Claim Reason', 'Sales Channel', 'Vehicle Class', 'Vehicle Size']
-df = pd.get_dummies(data=df,columns=cat_features)
+df = pd.get_dummies(data=df,columns=cat_features).drop(columns=['Customer','Effective To Date'])
+# scale and transform data
 train_y = df['Total Claim Amount']
-train_X = df.drop(columns=['Total Claim Amount','Customer','Effective To Date'])
+train_X = df.drop(columns=['Total Claim Amount'])
+columns = train_X.columns
+scalerX = MinMaxScaler().fit(np.array(train_X))
+scalery = MinMaxScaler().fit(np.array(train_y).reshape(-1,1))
+train_X = pd.DataFrame(scalerX.transform(np.array(train_X)))
+train_y = pd.DataFrame(scalery.transform(np.array(train_y).reshape(-1,1)))
+train_X.columns = columns
 
 # get validation data
 filepath = 'data/val.csv'
 df = pd.read_csv(filepath)
-df = pd.get_dummies(data=df,columns=cat_features)
+df = pd.get_dummies(data=df,columns=cat_features).drop(columns=['Customer','Effective To Date'])
 val_y = df['Total Claim Amount']
-val_X = df.drop(columns=['Total Claim Amount','Customer','Effective To Date'])
+val_X = df.drop(columns=['Total Claim Amount'])
 columns = val_X.columns
+val_X = pd.DataFrame(scalerX.transform(np.array(val_X)))
+val_y = pd.DataFrame(scalery.transform(np.array(val_y).reshape(-1,1)))
+val_X.columns = columns
 
 # calculate gradient
-tune(train_X,train_y,val_X,val_y)
+n_epoch,n_batch = tune(train_X,train_y,val_X,val_y)
+print(n_epoch)
+print(n_batch)
 model = create_model()
 print('fitting model')
-fit_model(train_X,train_y,val_X,val_y, 100, 200)
-grad = interpret(train_X,train_y,val_X,val_y,100,200)
-pred = model.predict(val_X, batch_size=200)
-evaluate_prediction(pred,val_y)
 
+fit_model(train_X,train_y,val_X,val_y, n_epoch, n_batch)
+grad = interpret(train_X,train_y,val_X,val_y,n_epoch,n_batch)
+pred = model.predict(val_X, batch_size=n_batch)
+mae = evaluate_prediction(pred,val_y)
+print(pred)
+print(val_y)
+
+pred = scalery.inverse_transform(pred)
+val_y = scalery.inverse_transform(val_y)
+print(pred)
+print(val_y)
+plt.figure(figsize=(20,5))
+plt.scatter(range(len(pred)),pred)
+plt.scatter(range(len(val_y)),val_y)
+plt.savefig('figs/predictions.png')
+plt.clf()
+
+# print(val_y)
+mae = evaluate_prediction(pred,val_y)
 
 # plot
 x = columns
